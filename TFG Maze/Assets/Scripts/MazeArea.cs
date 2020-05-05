@@ -52,10 +52,8 @@ namespace Maze
         public Vector3 whereStart300;
         [HideInInspector]
         public MazeAcademy academy;
-        // Start is called before the first frame update
         void Start()
         {
-            // agent = transform.GetComponentsInChildren<ta>();
             academy = FindObjectOfType<MazeAcademy>();
             CreateWalls();
         }
@@ -154,19 +152,15 @@ namespace Maze
             switch (whereStart) {
                 case 1:
                     whereStart3 = new Vector3(medPos.x - (((float)xSize / 2) * WallLenght) + ((float)WallLenght / 2), medPos.y + wall.transform.localScale.y / 2, medPos.z + (((float)ySize / 2) * WallLenght) - ((float)WallLenght / 2));
-                    // tempWall = Instantiate(start, whereStart3, Quaternion.identity) as GameObject;
                     break;
                 case 2:
                     whereStart3 = new Vector3(medPos.x + (((float)xSize / 2) * WallLenght) - ((float)WallLenght / 2), medPos.y + wall.transform.localScale.y / 2, medPos.z + (((float)ySize / 2) * WallLenght) - ((float)WallLenght / 2));
-                    //  tempWall = Instantiate(start, whereStart3, Quaternion.identity) as GameObject;
                     break;
                 case 3:
                     whereStart3 = whereStart300;
-                    // tempWall = Instantiate(start, whereStart3, Quaternion.identity) as GameObject;
                     break;
                 case 4:
                     whereStart3 = new Vector3(medPos.x + (((float)xSize / 2) * WallLenght) - ((float)WallLenght / 2), medPos.y + wall.transform.localScale.y / 2, medPos.z - (((float)ySize / 2) * WallLenght) + ((float)WallLenght / 2));
-                    //tempWall = Instantiate(start, whereStart3, Quaternion.identity) as GameObject;
                     break;
                 default:
                     Debug.Log("Nunca deberias entrar aqui");
@@ -183,19 +177,15 @@ namespace Maze
             switch (whereFinal) {
                 case 1:
                     whereFinal3 = new Vector3(medPos.x - (((float)xSize / 2) * WallLenght) + ((float)WallLenght / 2), medPos.y + wall.transform.localScale.y / 2, medPos.z + (((float)ySize / 2) * WallLenght) - ((float)WallLenght / 2));
-                    //Instantiate(final, whereFinal3, Quaternion.identity);
                     break;
                 case 2:
                     whereFinal3 = new Vector3(medPos.x + (((float)xSize / 2) * WallLenght) - ((float)WallLenght / 2), medPos.y + wall.transform.localScale.y / 2, medPos.z + (((float)ySize / 2) * WallLenght) - ((float)WallLenght / 2));
-                    //Instantiate(final, whereFinal3, Quaternion.identity);
                     break;
                 case 3:
                     whereFinal3 = new Vector3(medPos.x - (((float)xSize / 2) * WallLenght) + ((float)WallLenght / 2), medPos.y + wall.transform.localScale.y / 2, medPos.z - (((float)ySize / 2) * WallLenght) + ((float)WallLenght / 2));
-                    //Instantiate(final, whereFinal3, Quaternion.identity);
                     break;
                 case 4:
                     whereFinal3 = new Vector3(medPos.x + (((float)xSize / 2) * WallLenght) - ((float)WallLenght / 2), medPos.y + wall.transform.localScale.y / 2, medPos.z - (((float)ySize / 2) * WallLenght) + ((float)WallLenght / 2));
-                    // Instantiate(final, whereFinal3, Quaternion.identity);
                     break;
                 default:
                     Debug.Log("Nunca deberias entrar aqui");
@@ -223,9 +213,7 @@ namespace Maze
             int termCount = 0;
             //Gets All the children
             for (int i = 0; i < children; i++) {
-               // if (transform.GetChild(i).gameObject != agent) {
                     allWalls[i] = mazeHolder.transform.GetChild(i).gameObject;
-               // }
             }
             //Assigns waqll to the cells
             for (int cellprocess = 0; cellprocess < cells.Length; cellprocess++) {
@@ -251,7 +239,6 @@ namespace Maze
 
         void createMaze()
         {
-            //Debug.Log("Holiwi - 9");
             while (visitedCells < totalCells) {
                 if (startedBuilding) {
                     GiveMeNeighbour();
@@ -286,25 +273,20 @@ namespace Maze
             xpos *= 2;
             int ypos = Mathf.FloorToInt(currentCell / xSize);
             ypos *= 2;
-         //   Debug.Log(currentCell + " x " + xpos + "  y " + ypos );
             switch (wallToBreak) {
                 case 1:
-                //    elevate(cells[currentCell].north);
                     mazeInt[xpos, ypos + 1] = '·';
                     Destroy(cells[currentCell].north);
                     break;
                 case 2:
-                //    elevate(cells[currentCell].east);
                     mazeInt[xpos - 1, ypos] = '·';
                     Destroy(cells[currentCell].east);     
                     break;
                 case 3:
-                 //   elevate(cells[currentCell].west);
                     mazeInt[xpos+1, ypos] = '·';
                     Destroy(cells[currentCell].west);
                     break;
                 case 4:
-                  //  elevate(cells[currentCell].south);
                     mazeInt[xpos, ypos - 1] = '·';
                     Destroy(cells[currentCell].south);
                     
@@ -312,11 +294,7 @@ namespace Maze
             }
         }
 
-     /*   void elevate(GameObject ob)
-        {
-            ob.transform.localPosition = new Vector3(ob.transform.localPosition.x, 20f, ob.transform.localPosition.z);
-
-        }*/
+   
         void GiveMeNeighbour()
         {
 
@@ -387,9 +365,7 @@ namespace Maze
         void EraseMaze()
         {
             for(int i = 0; i < mazeHolder.transform.childCount; i++) {
-                //if (transform.GetChild(i) != agent) {
                     Destroy(mazeHolder.transform.GetChild(i).gameObject);
-                //}
             }
             Destroy(mazeHolder);
             cells = new Cell[0];

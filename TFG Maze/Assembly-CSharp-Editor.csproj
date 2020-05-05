@@ -87,67 +87,67 @@
     <Compile Include="Assets\ML-Agents\Editor\Tests\TimerTest.cs" />
     <Compile Include="Assets\ML-Agents\Editor\Tests\UtilitiesTests.cs" />
     <Reference Include="UnityEditor.TestRunner">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="MacBLAS">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/ScriptAssemblies/MacBLAS.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/ScriptAssemblies/MacBLAS.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Barracuda-editor">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/ScriptAssemblies/Barracuda-editor.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/ScriptAssemblies/Barracuda-editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Editor">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InputSystem">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Barracuda">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/ScriptAssemblies/Barracuda.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/ScriptAssemblies/Barracuda.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="iOSBLAS">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/ScriptAssemblies/iOSBLAS.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/ScriptAssemblies/iOSBLAS.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="BurstBLAS">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/ScriptAssemblies/BurstBLAS.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/ScriptAssemblies/BurstBLAS.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -342,25 +342,25 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.Abstractions">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Assets/ML-Agents/Plugins/System.IO.Abstractions.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Assets/ML-Agents/Plugins/System.IO.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.Abstractions.TestingHelpers">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Assets/ML-Agents/Plugins/System.IO.Abstractions.TestingHelpers.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Assets/ML-Agents/Plugins/System.IO.Abstractions.TestingHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Grpc.Core">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Assets/ML-Agents/Plugins/ProtoBuffer/Grpc.Core.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Assets/ML-Agents/Plugins/ProtoBuffer/Grpc.Core.dll</HintPath>
     </Reference>
     <Reference Include="System.Interactive.Async">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Assets/ML-Agents/Plugins/ProtoBuffer/System.Interactive.Async.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Assets/ML-Agents/Plugins/ProtoBuffer/System.Interactive.Async.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/PackageCache/com.unity.barracuda@0.4.0-preview/Barracuda/Plugins/ProtoBuffer/Google.Protobuf.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/PackageCache/com.unity.barracuda@0.4.0-preview/Barracuda/Plugins/ProtoBuffer/Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Unsafe">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/PackageCache/com.unity.burst@1.1.1/Unity.Burst.Unsafe.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/PackageCache/com.unity.burst@1.1.1/Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>W:/Users/pablo/Desktop/TFG/TFG Maze/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>W:/Users/pablo/Documents/GitHub/TFG-Maze/TFG Maze/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.21f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

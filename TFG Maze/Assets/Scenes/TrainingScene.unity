@@ -253,6 +253,11 @@ PrefabInstance:
       propertyPath: m_BrainParameters.vectorActionSize.Array.data[1]
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 796261787677666927, guid: 00856353ddfb8e041b2082e8869696fa,
+        type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5541125522684920003, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: agentParameters.maxStep
@@ -441,6 +446,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 796261787677666927, guid: 00856353ddfb8e041b2082e8869696fa,
+        type: 3}
+      propertyPath: m_BrainParameters.vectorActionSize.Array.data[0]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 796261787677666927, guid: 00856353ddfb8e041b2082e8869696fa,
+        type: 3}
+      propertyPath: m_BrainParameters.vectorActionSize.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5541125522684920003, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: agentParameters.maxStep
@@ -825,6 +840,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822056382263410248, guid: 1c7387b2c54a98c4297c2a39cc71ec61,
+        type: 3}
+      propertyPath: trainingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822056382263410248, guid: 1c7387b2c54a98c4297c2a39cc71ec61,
+        type: 3}
+      propertyPath: DebugMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c7387b2c54a98c4297c2a39cc71ec61, type: 3}

@@ -14,8 +14,8 @@ namespace Maze
         [HideInInspector]
         public MazeArea[] listArea;
 
-        [Tooltip("If true, enable training mode")]
-        public bool trainingMode;
+        [Tooltip("If true, enable Debug mode")]
+        public bool DebugMode;
 
         public bool reset = false;
         // Start is called before the first frame update
