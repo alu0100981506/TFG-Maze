@@ -17,7 +17,11 @@ namespace Maze
         [Tooltip("If true, enable Debug mode")]
         public bool DebugMode;
 
-        public bool reset = false;
+        public bool reset;
+        public override void InitializeAcademy()
+        {
+            reset = false; ;
+        }
         // Start is called before the first frame update
         void Start()
         {
@@ -34,7 +38,7 @@ namespace Maze
             }
         }
 
-        public override void AcademyReset()
+       /* public override void AcademyReset()
         {
             
             //agents = GameObject.FindGameObjectsWithTag("agent");
@@ -42,7 +46,8 @@ namespace Maze
             foreach (var fa in listArea) {
                 fa.ResetMazeArea();
             }
-        }
+        }*/
+       
 
         public void eset()
         {

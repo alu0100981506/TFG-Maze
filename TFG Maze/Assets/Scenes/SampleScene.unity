@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listArea: []
-  trainingMode: 0
+  DebugMode: 0
   reset: 0
 --- !u!4 &108591130
 Transform:
@@ -441,12 +441,12 @@ PrefabInstance:
     - target: {fileID: 3225026825349754676, guid: 2d33fd363765e344cb1d6330f812af00,
         type: 3}
       propertyPath: xSize
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3225026825349754676, guid: 2d33fd363765e344cb1d6330f812af00,
         type: 3}
       propertyPath: ySize
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3225026825349754676, guid: 2d33fd363765e344cb1d6330f812af00,
         type: 3}

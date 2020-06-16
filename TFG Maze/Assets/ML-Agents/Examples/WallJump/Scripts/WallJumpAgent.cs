@@ -319,6 +319,10 @@ public class WallJumpAgent : Agent
         }
         else if (config == 1)
         {
+
+        
+                Debug.Log(m_Academy.FloatProperties.GetPropertyWithDefault("small_wall_height", 4));
+            
             localScale = new Vector3(
                 localScale.x,
                 m_Academy.FloatProperties.GetPropertyWithDefault("small_wall_height", 4),
@@ -328,6 +332,7 @@ public class WallJumpAgent : Agent
         }
         else
         {
+           
             var min = m_Academy.FloatProperties.GetPropertyWithDefault("big_wall_min_height", 8);
             var max = m_Academy.FloatProperties.GetPropertyWithDefault("big_wall_max_height", 8);
             var height = min + Random.value * (max - min);
