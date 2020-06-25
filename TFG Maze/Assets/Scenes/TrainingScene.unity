@@ -136,7 +136,7 @@ PrefabInstance:
     - target: {fileID: 796261787677666927, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: m_BrainParameters.vectorActionSize.Array.data[0]
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 796261787677666927, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
@@ -255,7 +255,7 @@ PrefabInstance:
     - target: {fileID: 796261787677666927, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: m_BrainParameters.vectorActionSize.Array.data[0]
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 796261787677666927, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
@@ -375,7 +375,7 @@ PrefabInstance:
     - target: {fileID: 796261787677666927, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: m_BrainParameters.vectorActionSize.Array.data[0]
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 796261787677666927, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
@@ -498,10 +498,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 429295026922584023, guid: 00856353ddfb8e041b2082e8869696fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 796261787677666927, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: m_BrainParameters.vectorActionSize.Array.data[0]
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 796261787677666927, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
@@ -721,10 +726,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 429295026922584023, guid: 00856353ddfb8e041b2082e8869696fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 796261787677666927, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: m_BrainParameters.vectorActionSize.Array.data[0]
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 796261787677666927, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
@@ -825,10 +835,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 429295026922584023, guid: 00856353ddfb8e041b2082e8869696fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 796261787677666927, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: m_BrainParameters.vectorActionSize.Array.data[0]
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 796261787677666927, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
@@ -839,7 +854,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5022602860645237092, guid: a33426a8b1e944243a5f28d79ba2f856,
+        type: 3}
     - target: {fileID: 5541125522684920003, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: agentParameters.maxStep
@@ -848,7 +864,7 @@ PrefabInstance:
     - target: {fileID: 5541125522684920003, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: scenarioNumber
-      value: 5000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5541125522684920003, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
@@ -859,6 +875,11 @@ PrefabInstance:
         type: 3}
       propertyPath: agentParameters.numberOfActionsBetweenDecisions
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5541125522684920003, guid: 00856353ddfb8e041b2082e8869696fa,
+        type: 3}
+      propertyPath: studioNumber
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 9036836950926070016, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
@@ -878,12 +899,12 @@ PrefabInstance:
     - target: {fileID: 9036836950926070017, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: xSize
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9036836950926070017, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: ySize
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9036836950926070017, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
@@ -1125,6 +1146,16 @@ PrefabInstance:
         type: 3}
       propertyPath: DebugMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822056382263410248, guid: 1c7387b2c54a98c4297c2a39cc71ec61,
+        type: 3}
+      propertyPath: estudioMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822056382263410248, guid: 1c7387b2c54a98c4297c2a39cc71ec61,
+        type: 3}
+      propertyPath: estudioName
+      value: Estudio 1-6-LSTM-3.07E6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c7387b2c54a98c4297c2a39cc71ec61, type: 3}
