@@ -4,8 +4,9 @@
 
 ### Abstract
 
+Pathfinding algorithms are indispensable today, these algorithms are used by applications such as Google Maps, GPS systems, or even, in the routing of packets through the internet. In the field of medicine, they are also used in operations, to find the shortest and safest path considering all factors, including blood flows and obstacles, to get where the surgeon wants to go. These algorithms are deterministic and always take the same number of iterations to find the optimal path. The objective of this work is to study the possibility of creating through Deep Learning a model capable of competing against current “pathfinding” algorithms. To do this, the Unity development environment, and the ML-Agents machine learning toolkit, published by the Unity development team, are used.
 
-
+#### Keywords: Laberynth, Deep Learning, Ml-Agents, Pathfinding
 
 
 
