@@ -143,18 +143,19 @@ namespace Maze
         {
             int positiveVerticalSpace = 0;
             bool findWall = false;
-            for(int i = actualPosY+1; (i < (area.ySize * 2) - 1) && !findWall; i++) {
-                if(area.mazeInt[actualPosX,i] == '·') {
+            for (int i = actualPosY + 1; (i < (area.ySize * 2) - 1) && !findWall; i++) {
+                if (area.mazeInt[actualPosX, i] == '·') {
                     positiveVerticalSpace++;
-                }else if(area.mazeInt[actualPosX, i] == '#') {
+                }
+                else if (area.mazeInt[actualPosX, i] == '#') {
                     findWall = true;
                 }
             }
-            AddVectorObs(positiveVerticalSpace * (area.WallLenght / 2));
+
 
             int negativeVerticalSpace = 0;
             findWall = false;
-            for (int i = actualPosY - 1; (i > - 1) && !findWall; i--) {
+            for (int i = actualPosY - 1; (i > -1) && !findWall; i--) {
                 if (area.mazeInt[actualPosX, i] == '·') {
                     negativeVerticalSpace++;
                 }
@@ -162,11 +163,12 @@ namespace Maze
                     findWall = true;
                 }
             }
-            AddVectorObs(negativeVerticalSpace * (area.WallLenght / 2));
+          
+          
 
             int positiveHorizontalSpace = 0;
             findWall = false;
-            for (int i = actualPosX + 1; (i < (area.xSize * 2)-1) && !findWall; i++) {
+            for (int i = actualPosX + 1; (i < (area.xSize * 2) - 1) && !findWall; i++) {
                 if (area.mazeInt[i, actualPosY] == '·') {
                     positiveHorizontalSpace++;
                 }
@@ -174,11 +176,11 @@ namespace Maze
                     findWall = true;
                 }
             }
-            AddVectorObs(positiveHorizontalSpace * (area.WallLenght / 2));
+
 
             int negativeHorizontalSpace = 0;
             findWall = false;
-            for (int i = actualPosX - 1; (i >  - 1) && !findWall; i--) {
+            for (int i = actualPosX - 1; (i > -1) && !findWall; i--) {
                 if (area.mazeInt[i, actualPosY] == '·') {
                     negativeHorizontalSpace++;
                 }
@@ -186,13 +188,16 @@ namespace Maze
                     findWall = true;
                 }
             }
-            AddVectorObs(negativeHorizontalSpace * (area.WallLenght / 2));
 
 
-            AddVectorObs(transform.localPosition.x);//Agent position
-            AddVectorObs(transform.localPosition.z);
-            AddVectorObs(area.whereFinal3.x);//Final position
-            AddVectorObs(area.whereFinal3.z);
+            AddVectorObs(positiveVerticalSpace);   //North
+            AddVectorObs(negativeVerticalSpace);   //South
+            AddVectorObs(positiveHorizontalSpace); //East
+            AddVectorObs(negativeHorizontalSpace); //West
+            AddVectorObs(actualPosX);              //Agent position
+            AddVectorObs(actualPosY);
+            AddVectorObs(finalX);                  //Final position
+            AddVectorObs(finalY);
 
         }
 
@@ -321,8 +326,8 @@ namespace Maze
                 
                 studioIteration++;
                 var rand = new System.Random();
-                area.xSize = rand.Next(5, 10);
-                area.ySize = rand.Next(5, 10);
+                area.xSize = rand.Next(5, 16);
+                area.ySize = rand.Next(5, 16);
                
                 area.ResetMazeArea();
                 if (studioIteration == studioNumber) {
