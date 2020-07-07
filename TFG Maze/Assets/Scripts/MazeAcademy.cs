@@ -16,6 +16,8 @@ namespace Maze
 
         [Tooltip("If true, enable Debug mode")]
         public bool DebugMode;
+        public bool estudioMode;
+        public string estudioName;
 
         public bool reset;
         public override void InitializeAcademy()

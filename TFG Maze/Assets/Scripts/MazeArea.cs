@@ -381,6 +381,10 @@ namespace Maze
             CreateWalls();
 
         }
+        public void resetAgentPos()
+        {
+            agent.transform.localPosition = whereStart3 - transform.localPosition;
+        }
 
         public override void ResetArea()
         {
