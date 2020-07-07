@@ -20,11 +20,11 @@ namespace Maze
         public Location Parent;
     }
 
-    class Point
+    public class Point
     {
         public int X;
         public int Y;
-
+       
         public bool Equals(Point other)
         {
             if (other == null)
@@ -43,15 +43,15 @@ namespace Maze
 
         //  public bool taged { get; private set; }
         
-        private MazeArea area;
+        protected MazeArea area;
         private float horizontalChange;
         private float verticalChange;
-        private int actualPosX = 0;
-        private int actualPosY = 0;
-        private int finalX;
-        private int finalY;
-        private int startX;
-        private int startY;
+        protected int actualPosX = 0;
+        protected int actualPosY = 0;
+        protected int finalX;
+        protected int finalY;
+        protected int startX;
+        protected int startY;
         private MazeAcademy academy;
         [Header("Training")]
         [Tooltip("number of steps to time out after in training")]
@@ -69,8 +69,17 @@ namespace Maze
         private int scenarioIterations;
         private int studioIteration;
         private int acumulateSteps;
+
+
+        protected List<Point> visited;
+        protected Stack<Point> myStack;
+
+
         void Start()
         {
+            visited = new List<Point>();
+            myStack = new Stack<Point>();
+
             academy = FindObjectOfType<MazeAcademy>();
             area = GetComponentInParent<MazeArea>();
             csvContent = new StringBuilder();
@@ -212,14 +221,18 @@ namespace Maze
 
                 case 0:
                     verticalChange = 1f;
+                    //Debug.Log("norte");
                     break;
                 case 1:
                     verticalChange = -1f;
+                    //Debug.Log("sur");
                     break;
                 case 2:
+                    //Debug.Log("este");
                     horizontalChange = 1f;
                     break;
                 case 3:
+                    //Debug.Log("oeste");
                     horizontalChange = -1f;
                     break;
 
@@ -242,31 +255,7 @@ namespace Maze
 
 
         }
-       /* public override void AgentAction(float[] vectorAction)
-        {
-
-            horizontalChange = vectorAction[0];
-            if (horizontalChange == 2) horizontalChange = -1f;
-  
-            verticalChange = vectorAction[1];
-            if (verticalChange == 2) verticalChange = -1f;
-           
-         
-            ProcessMovement();
-           
-            //AddReward(-1.0f / (((area.xSize *2-1)*(area.ySize*2-1)) * 6));
-            AddReward(-1.0f / (area.xSize * area.ySize * 6));
-           
-            if (area.academy.DebugMode) {
-
-
-                scenariosteps++;
-                
-
-            }
-
-
-        }*/
+       
 
         private void ProcessMovement()
         {
@@ -326,8 +315,8 @@ namespace Maze
                 
                 studioIteration++;
                 var rand = new System.Random();
-                area.xSize = rand.Next(5, 16);
-                area.ySize = rand.Next(5, 16);
+                area.xSize = rand.Next(5, 10);
+                area.ySize = rand.Next(5, 10);
                
                 area.ResetMazeArea();
                 if (studioIteration == studioNumber) {
@@ -345,7 +334,10 @@ namespace Maze
         }
         public override void AgentReset()
         {
-            if(area.academy.DebugMode)
+            
+
+
+            if (area.academy.DebugMode)
                 scenariosteps++;
             
             if (area.academy.DebugMode) {
@@ -414,6 +406,14 @@ namespace Maze
                     finalY = (area.ySize * 2) - 2;
                     break;
             }
+
+
+            //Debug.Log("Nuevo escenario");
+            visited.Clear();
+            myStack.Clear();
+            Point start = new Point { X = startX, Y = startY };
+            myStack.Push(start);
+            visited.Add(start);
 
         }
 
@@ -618,7 +618,7 @@ namespace Maze
            // return proposedLocations.Where(l => area.mazeInt[l.Y][l.X] == ' ' || area.mazeInt[l.Y][l.X] == 'B').ToList();
         }
 
-         int ComputeHScore(int x, int y, int targetX, int targetY)
+         public int ComputeHScore(int x, int y, int targetX, int targetY)
         {
             return Math.Abs(targetX - x) + Math.Abs(targetY - y);
         }

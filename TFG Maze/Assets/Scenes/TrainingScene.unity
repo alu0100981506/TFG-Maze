@@ -854,7 +854,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: a33426a8b1e944243a5f28d79ba2f856,
+      objectReference: {fileID: 5022602860645237092, guid: f99112045386bb644862003b3de6db92,
         type: 3}
     - target: {fileID: 5541125522684920003, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
@@ -899,12 +899,12 @@ PrefabInstance:
     - target: {fileID: 9036836950926070017, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: xSize
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 9036836950926070017, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: ySize
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 9036836950926070017, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
@@ -1145,17 +1145,17 @@ PrefabInstance:
     - target: {fileID: 5822056382263410248, guid: 1c7387b2c54a98c4297c2a39cc71ec61,
         type: 3}
       propertyPath: DebugMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5822056382263410248, guid: 1c7387b2c54a98c4297c2a39cc71ec61,
         type: 3}
       propertyPath: estudioMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5822056382263410248, guid: 1c7387b2c54a98c4297c2a39cc71ec61,
         type: 3}
       propertyPath: estudioName
-      value: Estudio 1-6-LSTM-1.224E7
+      value: Estudio 1-6-LSTM-1.224E7 9x9 max
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c7387b2c54a98c4297c2a39cc71ec61, type: 3}
