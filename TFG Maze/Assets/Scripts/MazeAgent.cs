@@ -38,8 +38,8 @@ namespace Maze
         void Start()
         {
             csvContent = new StringBuilder();
-            csvContent.AppendLine(area.xSize+"x"+area.ySize);
-            csvPath = "W:\\Users\\pablo\\Desktop\\TFG\\"+ area.xSize + "x" + area.ySize + "-Not Min not max-13-" + scenarioNumber.ToString() + ".csv";
+            csvContent.AppendLine("LSTM 9x9");
+            csvPath = "W:\\Users\\pablo\\Desktop\\TFG\\"+ area.xSize + "x" + area.ySize + "-LSTM-V5-9-9-" + scenarioNumber.ToString() + ".csv";
         }
 
         // Update is called once per frame
@@ -111,7 +111,7 @@ namespace Maze
                     findWall = true;
                 }
             }
-            AddVectorObs(positiveVerticalSpace * (area.WallLenght / 2));
+            
 
             int negativeVerticalSpace = 0;
             findWall = false;
@@ -123,7 +123,7 @@ namespace Maze
                     findWall = true;
                 }
             }
-            AddVectorObs(negativeVerticalSpace * (area.WallLenght / 2));
+           
 
             int positiveHorizontalSpace = 0;
             findWall = false;
@@ -135,7 +135,7 @@ namespace Maze
                     findWall = true;
                 }
             }
-            AddVectorObs(positiveHorizontalSpace * (area.WallLenght / 2));
+            
 
             int negativeHorizontalSpace = 0;
             findWall = false;
@@ -147,41 +147,87 @@ namespace Maze
                     findWall = true;
                 }
             }
-            AddVectorObs(negativeHorizontalSpace * (area.WallLenght / 2));
 
 
-            AddVectorObs(transform.localPosition.x);//Agent position
-            AddVectorObs(transform.localPosition.z);
-            AddVectorObs(area.whereFinal3.x);//Final position
-            AddVectorObs(area.whereFinal3.z);
+
+            AddVectorObs(positiveVerticalSpace);   //North
+            AddVectorObs(negativeVerticalSpace);   //South
+            AddVectorObs(positiveHorizontalSpace); //East
+            AddVectorObs(negativeHorizontalSpace); //West
+            AddVectorObs(actualPosX);              //Agent position
+            AddVectorObs(actualPosY);
+            AddVectorObs(finalX);                  //Final position
+            AddVectorObs(finalY);
 
         }
 
-        public override void AgentAction(float[] vectorAction)
+       /* public override void AgentAction(float[] vectorAction)
         {
 
-            horizontalChange = vectorAction[0];
-            if (horizontalChange == 2) horizontalChange = -1f;
-  
-            verticalChange = vectorAction[1];
-            if (verticalChange == 2) verticalChange = -1f;
-           
-         
-            ProcessMovement();
-           
-            //AddReward(-1.0f / (((area.xSize *2-1)*(area.ySize*2-1)) * 6));
-            AddReward(-1.0f / (area.xSize * area.ySize * 6));
-           
+            horizontalChange = 0;
+            verticalChange = 0;
+
+
+            switch (vectorAction[0]) {
+
+                case 0:
+                    verticalChange = 1f;
+                    break;
+                case 1:
+                    verticalChange = -1f;
+                    break;
+                case 2:
+                    horizontalChange = 1f;
+                    break;
+                case 3:
+                    horizontalChange = -1f;
+                    break;
+
+            }
+
             if (area.academy.DebugMode) {
 
 
                 scenariosteps++;
-                
+
 
             }
 
+            ProcessMovement();
 
-        }
+            //AddReward(-1.0f / (((area.xSize *2-1)*(area.ySize*2-1)) * 6));
+            AddReward(-1.0f / (area.xSize * area.ySize * 6));
+
+
+
+
+        }*/
+
+        public override void AgentAction(float[] vectorAction)
+          {
+
+              horizontalChange = vectorAction[0];
+              if (horizontalChange == 2) horizontalChange = -1f;
+
+              verticalChange = vectorAction[1];
+              if (verticalChange == 2) verticalChange = -1f;
+
+
+              ProcessMovement();
+
+              //AddReward(-1.0f / (((area.xSize *2-1)*(area.ySize*2-1)) * 6));
+              AddReward(-1.0f / (area.xSize * area.ySize * 6));
+
+              if (area.academy.DebugMode) {
+
+
+                  scenariosteps++;
+
+
+              }
+
+
+          }
 
         private void ProcessMovement()
         {
@@ -191,9 +237,10 @@ namespace Maze
                 if (area.mazeInt[actualPosX + (int)verticalChange, actualPosY] == '·') {
                     if (verticalChange != 0) {
                         actualPosX = actualPosX + (int)verticalChange * 2;
-                        //actualPosX = actualPosX + (int)verticalChange;
+                     
+                        
                         transform.localPosition = new Vector3(transform.localPosition.x + (area.WallLenght) * verticalChange, transform.localPosition.y, transform.localPosition.z);
-                       // transform.localPosition = new Vector3(transform.localPosition.x + (area.WallLenght / 2) * verticalChange, transform.localPosition.y, transform.localPosition.z);
+                       
                     }
                 }
             }
@@ -202,9 +249,9 @@ namespace Maze
                 if (area.mazeInt[actualPosX, actualPosY + (int)horizontalChange] == '·') {
                     if (horizontalChange != 0) {
                         actualPosY = actualPosY + (int)horizontalChange * 2 ;
-                      //  actualPosY = actualPosY + (int)horizontalChange;
+                     
                         transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z + (area.WallLenght ) * horizontalChange);
-                      //  transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z + (area.WallLenght / 2) * horizontalChange);
+                      
                     }
 
                 }
@@ -222,9 +269,9 @@ namespace Maze
         public override void AgentReset()
         {
             if (area.academy.DebugMode) {
-                if (scenariosteps != 0 && scenariosteps != area.xSize - 1 && scenariosteps < agentParameters.maxStep) {
+             //   if (scenariosteps != 0 && scenariosteps != area.xSize - 1 && scenariosteps < agentParameters.maxStep) {
              // if (scenariosteps != 0 && scenariosteps != area.xSize - 1 ) {
-              //  if (scenariosteps != 0) {
+                if (scenariosteps != 0) {
                     acumulateSteps += scenariosteps;
                     scenarioIterations++;
                     Debug.Log(scenarioIterations + " <-- Escenarios   | Pasos en ese escenario  --> " + scenariosteps);
@@ -290,13 +337,8 @@ namespace Maze
         void configureAreaCurricula()
         {
             
-            
             int sizeX = (int)academy.FloatProperties.GetPropertyWithDefault("x_size", area.xSize);
             int sizeY = (int)academy.FloatProperties.GetPropertyWithDefault("y_size", area.ySize);
-            //Debug.Log("x -> " + academy.FloatProperties.GetPropertyWithDefault("x_size", area.xSize) + " , " + academy.FloatProperties.GetPropertyWithDefault("y_size", area.ySize) + " <- y  ");
-            if(sizeX != area.xSize || sizeY != area.ySize) {
-                Debug.Log("Cambio de tamaño!!!!  x-> " + sizeX + " ,   y -> " + sizeY);
-            }
             area.xSize = sizeX;
             area.ySize = sizeY;
             agentParameters.maxStep = (((area.xSize * 2 - 1) * (area.ySize * 2 - 1)) * 40);
