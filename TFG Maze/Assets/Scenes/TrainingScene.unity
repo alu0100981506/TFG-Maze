@@ -250,7 +250,7 @@ PrefabInstance:
     - target: {fileID: 429295026922584023, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 796261787677666927, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
@@ -275,7 +275,7 @@ PrefabInstance:
     - target: {fileID: 9036836950926070016, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9036836950926070017, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
@@ -290,12 +290,12 @@ PrefabInstance:
     - target: {fileID: 9036836950926070017, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: xSize
-      value: 4
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 9036836950926070017, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: ySize
-      value: 4
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 9036836950926070018, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
@@ -370,7 +370,7 @@ PrefabInstance:
     - target: {fileID: 429295026922584023, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 796261787677666927, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
@@ -400,7 +400,7 @@ PrefabInstance:
     - target: {fileID: 9036836950926070016, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9036836950926070017, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
@@ -415,12 +415,12 @@ PrefabInstance:
     - target: {fileID: 9036836950926070017, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: xSize
-      value: 4
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 9036836950926070017, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: ySize
-      value: 4
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 9036836950926070018, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
@@ -729,7 +729,7 @@ PrefabInstance:
     - target: {fileID: 429295026922584023, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 796261787677666927, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
@@ -754,17 +754,17 @@ PrefabInstance:
     - target: {fileID: 9036836950926070016, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9036836950926070017, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: xSize
-      value: 4
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 9036836950926070017, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: ySize
-      value: 4
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 9036836950926070017, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
@@ -854,8 +854,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: f99112045386bb644862003b3de6db92,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5541125522684920003, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: agentParameters.maxStep
@@ -899,12 +898,12 @@ PrefabInstance:
     - target: {fileID: 9036836950926070017, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: xSize
-      value: 9
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 9036836950926070017, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
       propertyPath: ySize
-      value: 9
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 9036836950926070017, guid: 00856353ddfb8e041b2082e8869696fa,
         type: 3}
@@ -1145,12 +1144,12 @@ PrefabInstance:
     - target: {fileID: 5822056382263410248, guid: 1c7387b2c54a98c4297c2a39cc71ec61,
         type: 3}
       propertyPath: DebugMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5822056382263410248, guid: 1c7387b2c54a98c4297c2a39cc71ec61,
         type: 3}
       propertyPath: estudioMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5822056382263410248, guid: 1c7387b2c54a98c4297c2a39cc71ec61,
         type: 3}
