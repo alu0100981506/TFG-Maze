@@ -137,70 +137,17 @@ MonoBehaviour:
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
   stepTimeout: 300
-  horizontalInput:
-    m_Name: Horizontal Input
+  scenarioNumber: 100
+  studioNumber: 100
+  studioString: 
+  Input:
+    m_Name: Input
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 5cd39486-2579-4078-8fcd-2e2c726ccd11
+    m_Id: 460e8ec9-7a64-491f-a4d4-d506191b06fc
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 1D Axis
-      m_Id: 637a2918-58a5-4f47-82f5-07a67f099df6
-      m_Path: 1DAxis
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Horizontal Input
-      m_Flags: 4
-    - m_Name: negative
-      m_Id: 47befc9a-90b7-41fe-a25d-08c7d0599e4d
-      m_Path: <Keyboard>/s
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Horizontal Input
-      m_Flags: 8
-    - m_Name: positive
-      m_Id: 2dbec66c-855c-407b-8d07-698dfecad9d6
-      m_Path: <Keyboard>/w
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Horizontal Input
-      m_Flags: 8
-  verticalInput:
-    m_Name: Vertical Input
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 98d68e35-188f-42be-b1cb-01854ae90f30
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 1D Axis
-      m_Id: 00d314a4-65cd-465e-b99e-4a8a29f31295
-      m_Path: 1DAxis
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Vertical Input
-      m_Flags: 4
-    - m_Name: negative
-      m_Id: 51ce6302-42ce-4205-bf4f-22e4efb69e07
-      m_Path: <Keyboard>/a
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Vertical Input
-      m_Flags: 8
-    - m_Name: positive
-      m_Id: 8592be71-ba3c-4b40-8bc4-c08a82ab8d73
-      m_Path: <Keyboard>/d
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Vertical Input
-      m_Flags: 8
+    m_SingletonActionBindings: []
 --- !u!65 &169036831382143091
 BoxCollider:
   m_ObjectHideFlags: 0

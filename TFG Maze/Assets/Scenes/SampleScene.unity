@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f710d360a49461cad67ff5e6bcefe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  record: 1
+  record: 0
   demonstrationName: DFS-Modificado-Whole-Night
 --- !u!1 &2016461174
 GameObject:
@@ -607,18 +607,23 @@ PrefabInstance:
     - target: {fileID: 3225026825349754676, guid: 2d33fd363765e344cb1d6330f812af00,
         type: 3}
       propertyPath: xSize
-      value: 16
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3225026825349754676, guid: 2d33fd363765e344cb1d6330f812af00,
         type: 3}
       propertyPath: ySize
-      value: 16
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3225026825349754676, guid: 2d33fd363765e344cb1d6330f812af00,
         type: 3}
       propertyPath: agent
       value: 
       objectReference: {fileID: 1568008371}
+    - target: {fileID: 3225026825349754676, guid: 2d33fd363765e344cb1d6330f812af00,
+        type: 3}
+      propertyPath: PerfectMaze
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3225026825349754677, guid: 2d33fd363765e344cb1d6330f812af00,
         type: 3}
       propertyPath: m_Name

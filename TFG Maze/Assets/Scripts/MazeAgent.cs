@@ -56,6 +56,8 @@ namespace Maze
         [Header("Training")]
         [Tooltip("number of steps to time out after in training")]
         public int stepTimeout = 1000;
+        private int chocao;
+
 
         private StringBuilder csvContent;
         private string csvPath;
@@ -79,12 +81,14 @@ namespace Maze
         {
             visited = new List<Point>();
             myStack = new Stack<Point>();
-
+            chocao = 0;
             academy = FindObjectOfType<MazeAcademy>();
             area = GetComponentInParent<MazeArea>();
+            
             csvContent = new StringBuilder();
             csvContent.AppendLine("Laberinto, Optimo, Pasos A* optimo, Pasos A* modificado, Veces mejor, Veces igual, Media Modelo ");
-            csvPath = "C:\\Users\\pablo\\Desktop\\TFG\\"+ area.academy.estudioName + ".csv";
+            csvPath = "W:\\Users\\pablo\\Desktop\\TFG\\" +
+                area.academy.estudioName + ".csv";
             
         }
 
@@ -137,8 +141,8 @@ namespace Maze
                 case 1:
                     finalX = 0;
                     finalY = (area.ySize * 2) - 2;
-                    break;
-                case 2:
+                     
+                    break;                case 2:
                     finalX = (area.xSize * 2) - 2;
                     finalY = (area.ySize * 2) - 2;
                     break;
@@ -270,6 +274,12 @@ namespace Maze
                        // transform.localPosition = new Vector3(transform.localPosition.x + (area.WallLenght / 2) * verticalChange, transform.localPosition.y, transform.localPosition.z);
                     }
                 }
+                else {
+
+                    Debug.Log("Me he chocao!!");
+                    chocao++;
+
+                }
             }
 
             if ((actualPosY + horizontalChange) < (area.ySize*2)-1 && (actualPosY + horizontalChange) > -1) {
@@ -280,6 +290,12 @@ namespace Maze
                         transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z + (area.WallLenght ) * horizontalChange);
                       //  transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z + (area.WallLenght / 2) * horizontalChange);
                     }
+
+                }
+                else {
+
+                  //  Debug.Log("Me he chocao!!");
+                    chocao++;
 
                 }
             }
@@ -307,7 +323,7 @@ namespace Maze
 
                 
                 acumulateSteps /=  scenarioNumber;
-                Debug.Log("De media en " + scenarioNumber + " escenarios de " + area.xSize + " x, " + area.ySize + "y.  Ha hecho un total de " + acumulateSteps + " pasos");
+                Debug.Log("Scenario numero: "+ studioIteration +".   De media en " + scenarioNumber + " escenarios de " + area.xSize + " x, " + area.ySize + "y.  Ha hecho un total de " + acumulateSteps + " pasos");
                 acumulateSteps = 0;
                 scenarioIterations = 0;
                 csvContent.AppendLine(studioString);
@@ -322,7 +338,8 @@ namespace Maze
                 if (studioIteration == studioNumber) {
 
                     File.AppendAllText(csvPath, csvContent.ToString());
-                    Debug.Log("Finiquitado");
+                    Debug.Log("Terminao");
+                    Debug.Log("Chocado un total de " + chocao);
 
                 }
 
@@ -332,9 +349,31 @@ namespace Maze
 
             
         }
+        void countWalls()
+        {
+
+            int count = 0;
+            for (int i = 0; i < area.xSize * 2 - 1; i++) {
+                for (int j = 0; j < area.ySize * 2 - 1; j++) {
+                    if (area.mazeInt[i, j] == '#') {
+                        count++;
+                    }
+                }
+            }
+            count = count - ((area.xSize - 1) * (area.ySize - 1));
+            int numWalls = (area.ySize-1)*(2*(area.xSize-1)+1)+area.xSize-1;
+            //numWalls = numWalls - (area.xSize * area.ySize) + 1;
+            Debug.Log("Segun mis calculos : " + numWalls);
+            Debug.Log("El numero de paredes es de : " + count);
+
+        }
         public override void AgentReset()
         {
-            
+
+
+           // countWalls();
+
+
 
 
             if (area.academy.DebugMode)

@@ -30,6 +30,8 @@ namespace Maze
         public float WallLenght = 1f;
         public int xSize = 5;
         public int ySize = 5;
+        public bool PerfectMaze = true;
+        public int PercentWallEraser = 20;
         private Vector3 initialPos;
         private GameObject mazeHolder;
         private Cell[] cells;
@@ -122,7 +124,9 @@ namespace Maze
             tempWall.transform.parent = mazeHolder.transform;
             CreateCells();
             CreateStartFinal();
-
+            if (!PerfectMaze) {
+                NonPerfectgenerator();
+            }
 
           // debugMaze = "";
            /* for (int i = 0; i < xSize * 2 - 1; i++) {
@@ -132,6 +136,117 @@ namespace Maze
                 Debug.Log(debugMaze);
                 debugMaze = "";
             }*/
+
+        }
+
+        private void NonPerfectgenerator() 
+        {
+           // Debug.Log("A romper");
+            int numWalls = (ySize - 1) * (2 * (xSize - 1) + 1) + xSize - 1;
+            numWalls = numWalls - (xSize * ySize) + 1;
+
+            int wallsToBreak = (int)Math.Floor(((double)PercentWallEraser / (double)100) * numWalls);
+           // Debug.Log("A romper " + (int)Math.Floor(((double)PercentWallEraser / (double)100) * numWalls) + " muros");
+            bool toBreak = false;
+            while(wallsToBreak > 0) {
+
+                toBreak = false;
+                currentCell = UnityEngine.Random.Range(0, (xSize * ySize) -1);
+                GiveMeNeighbourToBreak();    
+                int xpos = currentCell % xSize;
+                xpos *= 2;
+                int ypos = Mathf.FloorToInt(currentCell / xSize);
+                ypos *= 2;
+               // Debug.Log(" Cell " + currentCell + " , wall : " + wallToBreak);
+                switch (wallToBreak) {
+                    case 1:
+                        if(mazeInt[xpos, ypos + 1] == '#')
+                            toBreak = true;
+                            break;
+                    case 2:
+                       
+                        if (mazeInt[xpos - 1, ypos] == '#')
+                            toBreak = true;
+                        break;
+                    case 3:
+                        if (mazeInt[xpos + 1, ypos] == '#')
+                            toBreak = true;
+                        break;
+                    case 4:
+                        if (mazeInt[xpos, ypos - 1] == '#')
+                            toBreak = true;
+                        break;
+                }
+
+                if (toBreak) {
+                 //   Debug.Log("La pared " + wallToBreak + " de la celula " + currentCell + " no esta rota");
+                    BreakWall();
+                  //  Debug.Log("Ahora si");
+                    wallsToBreak--;
+                }
+                                               
+            }
+
+        }
+
+        void GiveMeNeighbourToBreak()
+        {
+
+            int[] connectingWall = new int[4];
+            int length = 0;
+            int[] neighbours = new int[4];
+            int check = 0;
+            check = ((currentCell + 1) / xSize);
+            check -= 1;
+            check *= xSize;
+            check += xSize;
+
+            //west
+            if (currentCell + 1 < totalCells && (currentCell + 1) != check) {
+               
+                    neighbours[length] = currentCell + 1;
+                    connectingWall[length] = 3;
+                    length++;
+                
+            }
+            //east
+            if (currentCell - 1 >= 0 && currentCell != check) {
+                
+                    neighbours[length] = currentCell - 1;
+                    connectingWall[length] = 2;
+                    length++;
+                
+            }
+
+            //north
+            if (currentCell + xSize < totalCells) {
+                
+                    neighbours[length] = currentCell + xSize;
+                    connectingWall[length] = 1;
+                    length++;
+                
+            }
+
+            //South
+            if (currentCell - xSize >= 0) {
+               
+                    neighbours[length] = currentCell - xSize;
+                    connectingWall[length] = 4;
+                    length++;
+                
+            }
+
+            if (length != 0) {
+                int theChoosenOne = UnityEngine.Random.Range(0, length);
+                currentNeighbour = neighbours[theChoosenOne];
+                wallToBreak = connectingWall[theChoosenOne];
+            }
+            else {
+                if (backingUp > 0) {
+                    currentCell = lastCells[backingUp];
+                    backingUp--;
+                }
+            }
 
         }
 

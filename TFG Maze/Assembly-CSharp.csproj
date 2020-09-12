@@ -187,7 +187,9 @@
     <Compile Include="Assets\ML-Agents\Scripts\Utilities.cs" />
     <Compile Include="Assets\Scripts\MazeAcademy.cs" />
     <Compile Include="Assets\Scripts\MazeAgent.cs" />
+    <Compile Include="Assets\Scripts\MazeAgentWilson.cs" />
     <Compile Include="Assets\Scripts\MazeArea.cs" />
+    <Compile Include="Assets\Scripts\MazeAreaWilson.cs" />
     <Compile Include="Assets\Scripts\MazePlayer.cs" />
     <None Include="Assets\Shaders\as.shader" />
     <None Include="Assets\ML-Agents\Examples\SharedAssets\Materials\ShaderRadialGrid.shader" />

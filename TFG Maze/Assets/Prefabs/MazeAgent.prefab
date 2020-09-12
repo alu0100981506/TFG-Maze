@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3977218345093316501}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.05847, y: 2.478424, z: 41.098633}
+  m_LocalPosition: {x: -43.267235, y: -2.7145767, z: -33.958893}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -136,3 +136,6 @@ MonoBehaviour:
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
   stepTimeout: 300
+  scenarioNumber: 100
+  studioNumber: 100
+  studioString: 
